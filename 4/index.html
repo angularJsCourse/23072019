@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularProject1</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="calcCtrl.js"></script>
+    <script src="resCtrl.js"></script>
+    <script src="res2Ctrl.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div ng-controller="calcCtrl">
+        <input type="number" id="nameTxt" class="dark"  ng-model="x">
+        <select id="select" ng-model="res">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="ageTxt" ng-model="y">
+        <div ng-controller="resCtrl">
+            <p ng-model="c">child {{c}}</p>
+            <button ng-click="calc()">Click Me!</button>
+        </div>
+    </div>
+
+    <div ng-controller="res2Ctrl">
+        <p ng-model="publicResult" > {{publicResult}}</p>
+    </div>
+</body>
+
+</html>
